@@ -1,0 +1,207 @@
+:root {
+  --white: #fff !important;
+  --blue-button: #0c468f;
+}
+
+main {
+  overflow: hidden;
+  overflow-y: none;
+  overflow-x: none;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+main .container__tablet {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.7fr repeat(5, 1fr) 1.3fr;
+  grid-template-rows: 1.3fr 1.5fr repeat(2, 1fr);
+  gap: 0px 0px;
+  grid-template-areas: "Menu BannerArea BannerArea BannerArea BannerArea BannerArea ContainerCapacitaciones" "Menu CapacitacioneSolicitud CapacitacioneSolicitud CatalogoFG CatalogoValmact Fichas ContainerCapacitaciones" "Menu TiendasEnLinea TiendasEnLinea TiendasEnLinea SobreNosotros SobreNosotros ContainerCapacitaciones" "Menu TiendasEnLinea TiendasEnLinea TiendasEnLinea Merch Merch ContainerCapacitaciones";
+}
+main .BannerArea {
+  grid-area: BannerArea;
+  background-color: #f345d3;
+}
+main .ContainerCapacitaciones {
+  grid-area: ContainerCapacitaciones;
+  background-color: #860e70;
+}
+main .CapacitacioneSolicitud {
+  grid-area: CapacitacioneSolicitud;
+  background-color: #1e6ea4;
+}
+main .CatalogoFG {
+  grid-area: CatalogoFG;
+  background-color: #2b1ea4;
+}
+main .CatalogoValmact {
+  grid-area: CatalogoValmact;
+  background-color: #4637d3;
+}
+main .SobreNosotros {
+  grid-area: SobreNosotros;
+  background-color: #180c84;
+}
+main .TiendasEnLinea {
+  grid-area: TiendasEnLinea;
+  background-color: #840c40;
+}
+main .Merch {
+  grid-area: Merch;
+  background-color: #0c7284;
+}
+main .Fichas {
+  grid-area: Fichas;
+  background-color: #2511d8;
+}
+
+/*Banner Section*/
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel_banner {
+  background-color: #7d8589;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.banner__containers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  overflow: hidden;
+}
+.banner__containers .banner__content__background {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 9;
+}
+.banner__containers .banner__content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 70%;
+}
+.banner__containers .banner__content .banner__content__type {
+  font-size: 20px;
+  color: var(--white);
+  letter-spacing: 4px;
+  font-weight: 300;
+}
+.banner__containers .banner__content .banner__content__title {
+  font-size: 33px;
+  text-wrap: balance;
+  color: var(--white);
+  font-weight: normal;
+  padding: 0.5rem 0 1rem 0;
+}
+.banner__containers .banner__content .banner__content__title .banner__content__strong {
+  font-weight: 600;
+}
+.banner__containers .banner__content .banner__content__button {
+  background-color: var(--blue-button);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.banner__containers .banner__content .banner__content__button span svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.carousel_control_arrow {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  width: 70px;
+  height: 30px;
+  z-index: 13;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.carousel_control_arrow .carousel-control-prev,
+.carousel_control_arrow .carousel-control-next {
+  border-radius: 5px;
+  background-color: #0c7284;
+  width: 30px;
+  height: 30px;
+}
+.carousel_control_arrow .carousel-control-prev .carousel-control-next-icon,
+.carousel_control_arrow .carousel-control-prev .carousel-control-prev-icon,
+.carousel_control_arrow .carousel-control-next .carousel-control-next-icon,
+.carousel_control_arrow .carousel-control-next .carousel-control-prev-icon {
+  width: 20px;
+}
+
+/* Banner Section*/
+/* Catalogos*/
+.CatalogoFG {
+  padding: 1rem;
+}
+.CatalogoFG .catalog__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c7284;
+  border-radius: 10px;
+  text-align: center;
+  height: 180px;
+}
+.CatalogoFG .catalog__content .catalog__content__image {
+  width: 120px;
+  height: 150px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translateY(-1.5rem);
+  z-index: 14;
+}
+.CatalogoFG .catalog__content .catalog__content__title {
+  font-size: 15px;
+  color: var(--white);
+  padding: 0 0 2rem 0;
+  text-wrap: balance;
+}
+.CatalogoFG .catalog__content .catalog__content__paragraph {
+  font-size: 13px;
+}
+.CatalogoFG .catalog__content .catalog__content__button {
+  background-color: var(--blue-button);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+/* Catalogos*//*# sourceMappingURL=main.css.map */
