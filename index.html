@@ -12,6 +12,27 @@
 </head>
 
 <body>
+  <!-- Modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
   <main>
     <div class="container__tablet">
       <div class="SideBar">
@@ -146,11 +167,15 @@
         <div class="TiendaEnLinea__Content row">
           <div class="TiendaEnLinea__FG col-6">
             <h2>Cotiza en linea <span> FG </span></h2>
-            <img src="./assets/TiendaFG.png" alt="">
+            <a href="https://www.fgelectrical.com/" target="_blank">
+              <img src="./assets/TiendaFG.png" alt="Tienda en linea FG Electrical">
+            </a>
           </div>
           <div class="TiendaEnLinea__FGM col-6">
             <h2>Cotiza en linea <span> Valmact </span></h2>
-            <img src="./assets/TiendaFGM.png" alt="">
+            <a href="https://valmact.com/" target="_blank">
+              <img src="./assets/TiendaFGM.png" alt="Tienda en linea Valmact">
+            </a>
           </div>
           <div class="col-12">
             <div class="TiendaEnLinea__codigo row">
@@ -171,9 +196,11 @@
             <h2>Conoce el poder de la calidad</h2>
             <p>¿Ya nos conocías? Sumergete en nuestro video corporativo y descubre todo lo que FG Electrical tiene para
               ti.</p>
-            <button>Nuestras propuesta de valor</button>
+            <a href="https://cdn.shopify.com/s/files/1/0257/8494/2641/files/CV_FGE_2023.pdf?v=1690929896"
+              target="_blank">Nuestras propuesta de valor</a>
           </div>
-          <div class="SobreNosotros__play ">
+          <div class="SobreNosotros__play" type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
               <path fill="currentColor"
                 d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M1.5 8a6.5 6.5 0 1 0 13 0a6.5 6.5 0 0 0-13 0m4.879-2.773l4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215" />
@@ -187,7 +214,7 @@
             <h2>Solicita tu Merchandising</h2>
             <p>¿Nos invitas a formar parte de tus tiendas? Conoce nuestros terminos y condiciones. Disfruta de estos y
               muchos otros beneficios para ti.</p>
-            <button>Da vida a tu sucursal</button>
+            <a href="" target="_blank">Da vida a tu sucursal</a>
           </div>
           <div class="Merch__play ">
             <img src="./assets/Merch.svg" alt="">
@@ -241,7 +268,7 @@
             </div>
           </div>
           <div class="col-12 container__boton">
-            <a>Ver como participar</a>
+            <a href="" target="_blank">Ver como participar</a>
           </div>
           <div class="col-12">
             <div class="social__media row">
