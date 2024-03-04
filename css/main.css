@@ -23,6 +23,7 @@ main .SideBar {
   grid-area: SideBar;
 }
 main .BannerArea {
+  padding-bottom: 2rem;
   grid-area: BannerArea;
 }
 main .ContainerCapacitaciones {
@@ -44,6 +45,7 @@ main .TiendasEnLinea {
   grid-area: TiendasEnLinea;
 }
 main .Merch {
+  padding: 2.5rem 0 0 0;
   grid-area: Merch;
 }
 main .Fichas {
@@ -188,6 +190,11 @@ main .Fichas {
      object-fit: cover;
   transform: translateY(-1.5rem);
   z-index: 14;
+  transition: all 500ms ease-in-out;
+}
+.CatalogoFG .catalog__content .catalog__content__image:hover,
+.CatalogoValmact .catalog__content .catalog__content__image:hover {
+  transform: translateY(-2rem);
 }
 .CatalogoFG .catalog__content .catalog__content__title,
 .CatalogoValmact .catalog__content .catalog__content__title {
@@ -229,9 +236,13 @@ main .Fichas {
 .Fichas .catalog__content .catalog__content__paper {
   width: 4rem;
   height: 4rem;
+  transition: all 500ms ease-in-out;
 }
 .Fichas .catalog__content .catalog__content__paper path {
   fill: var(--white);
+}
+.Fichas .catalog__content .catalog__content__paper:hover {
+  transform: scale(1.1);
 }
 .Fichas .catalog__content .catalog__content__image {
   width: 120px;
@@ -282,10 +293,10 @@ main .Fichas {
   padding: 1rem;
 }
 .capacitaciones__content .capacitaciones__content__politicies {
-  font-size: 9px;
+  font-size: 7px;
   margin: 0;
   color: var(--white);
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 .capacitaciones__content .capacitaciones__content__title {
   color: var(--white);
@@ -316,7 +327,7 @@ main .Fichas {
   font-weight: 500;
 }
 .capacitaciones__content .capacitaciones__content__form form #correo {
-  width: 47%;
+  width: 64%;
 }
 .capacitaciones__content .capacitaciones__content__form form #datetime,
 .capacitaciones__content .capacitaciones__content__form form #asistentes {
@@ -325,7 +336,7 @@ main .Fichas {
   font-size: 10px;
 }
 .capacitaciones__content .capacitaciones__content__form form #asistentes {
-  width: 15%;
+  width: 31%;
   color: var(--white);
   font-size: 10px;
 }
@@ -345,7 +356,7 @@ main .Fichas {
 .TiendasEnLinea .TiendaEnLinea__Content .TiendaEnLinea__FG,
 .TiendasEnLinea .TiendaEnLinea__Content .TiendaEnLinea__FGM {
   text-align: center;
-  padding: 1rem 1rem 1rem 0;
+  padding: 1rem;
 }
 .TiendasEnLinea .TiendaEnLinea__Content .TiendaEnLinea__FG h2,
 .TiendasEnLinea .TiendaEnLinea__Content .TiendaEnLinea__FGM h2 {
@@ -562,6 +573,7 @@ main .Fichas {
   font-size: 15px;
   padding: 5px;
   border: 0;
+  text-decoration: none;
 }
 .ContainerCapacitaciones .event__container .ranking__sales {
   text-align: center;
@@ -595,7 +607,7 @@ main .Fichas {
 
 /*Eventos y Concursos*/
 .SideBar {
-  padding: 0 1rem 2rem 0;
+  padding: 0 1rem 0rem 1rem;
 }
 .SideBar .Menu__content {
   height: 100%;
