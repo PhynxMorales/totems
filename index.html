@@ -3,371 +3,409 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="shortcut icon"
-    href="https://cdn.shopify.com/s/files/1/0257/8494/2641/files/icono_180x180.png?v=1613523145">
+  <link rel="stylesheet" href="./css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <title>Diplomado FG Electrical</title>
+</head>
+<title>Tablets Project</title>
 </head>
 
 <body>
-  <div class="modal fade" id="myModalExito" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" style="display: block;" aria-modal="true" role="dialog">
-    <div class="modal-dialog">
+  <!-- Modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body medal-body">
-          <img class="text-center medal" src="./assets/medal.svg" alt="Logo Formula E">
-          <h2>Fecilidades <br> tu registro fue <span> completado!</span></h2>
-          <p class="paragraph-light">Revisar tu correo en la <span class="text-info">bandeja de entrada o SPAM</span>
-          </p>
-          <p class="paragraph-light">No olvides revisar tu confirmación para más detalles.</p>
-        </div>
-        <div class="modal-footer medal-footer">
-          <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-          <button type="button" class="btn-confirmacion" data-bs-dismiss="modal" aria-label="Close">¡Gracias
-            revisare mi
-            correo!</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <audio class="audio">
-    <source src="./assets/radio.mp3" type="audio/mp3">
-  </audio>
-  <div class="modal fade" id="noCartaCovid" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">AVISO IMPORTANTE</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body d-flex flex-column justify-content-center align-items-center">
-          <img class="text-center w-100" width="200" src="./assets/FormulaE_Color.svg" alt="Logo Formula E">
-          <div class="text-center alert alert-danger" role="alert">
-            Tienes que contar con tu esquema covid completo, de lo contrario no podrias asistir al evento y no podras
-            completar tu registro, por favor, verifica de nuevo, hasta que tengas tu esquema completo.
-          </div>
-        </div>
-        <div class="modal-footer">
-          <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="cartaCovid" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">AVISO IMPORTANTE</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body d-flex flex-column justify-content-center align-items-center">
-          <img class="text-center w-100" width="200" src="./assets/FormulaE_Color.svg" alt="Logo Formula E">
-          <div class="text-center alert alert-danger" role="alert">
-            Recuerda llevar impreso y firmado tu carta covid, de lo contrario no podras asistir al evento
-          </div>
-          <a class="text-center" href="https://f1.fgelectrical.com/documents/Carta_covid.pdf" target="Blank_">
-            <button class="btn-submit">Imprimir carta covid</button>
-          </a>
-        </div>
-        <div class="modal-footer">
-          <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">¡Ok!,Llevare impresa
-            mi carta</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal  show" id="myModalExito" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Registrado Correctamente</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Video Corporativo</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <img class="text-center w-100" width="200" src="./assets/fg_imagotipo.svg" alt="Logo Formula E">
-          <h2>Gracias por registrarte</h2>
-          <p>Revisar tu correo en la <span class="text-info">bandeja de entrada o SPAM</span></p>
-          <p>Es un placer para nosotros el que formes parte de esta y muchas mas experiencias</p>
-          <div class="alert alert-danger" role="alert">
-            Tu registro es valido, siempre y cuando hayas recibido previamente tu correo de invitación al evento
-          </div>
-          <p>#DiplomadoFGElectrical #ExpertosEnMediaTension</p>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vhleVKuaT_Y?si=UPQy-JjNgpoECbL7"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div>
         <div class="modal-footer">
-          <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">¡Gracias revisare mi
-            correo!</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         </div>
       </div>
     </div>
   </div>
 
-  <main>
-    <div class="container-fluid ">
-      <div class="row container__registro container__diplomado">
-        <div class="col-12 col-md-12 col-lg-6 content__registro ">
-          <span class="cuadrado">
-            <img src="./assets/cuadrado_puntos.svg" alt="">
-          </span>
-          <span class="cuadrado">
-            <img src="./assets/cuadrado_puntos.svg" alt="">
-          </span>
-          <div class="registro__info">
-            <div class="registro__info__patrocinadores">
-              <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                    class="active controls__banner" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2" class="controls__banner"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3" class="controls__banner"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active ">
-                    <div class="banner__item">
-                      <img src="./assets/WhatsApp Image 2023-02-23 at 3.01 1.png" class="banner__image" alt="">
-                      <h3 class="text-center">Conoce el itinerario de capacitaciones</h3>
-                      <p class="text-center">
-                        El cupo es limitado aparte tu lugar.
-                      </p>
-                    </div>
-
-                  </div>
-                  <div class="carousel-item">
-                    <div class="banner__item">
-                      <img src="./assets/horario.png" class="banner__image" alt="">
-                      <h3 class="text-center">16 y 17 marzo</h3>
-                      <p class="text-center">Se parte de nuestro primer diplomado especializado de ventas en Media
-                        Tensión.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="banner__item">
-                      <img src="./assets/funcionamiento.png" class="banner__image" alt="">
-                      <h3 class="text-center">¿Que se vera en el diplomado?</h3>
-                      <p class="text-center">
-                        Te acercamos a su portafolio de productos con platicas especializadas y enfocadas a la media
-                        tensión, conoce las tablas de selección, así como videos y el portafolio de productos que
-                        ofrecen una de las empresas lideres en el sector.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
+  <div class="modal fade" id="CatalogoFG" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Catálogo FG Electrical</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-
-        <div class="col-12 col-md-12 col-lg-6 content_formulario ">
-          <div class="registro__formulario">
-            <div class="formulario__description">
-              <img class="info__image__logo" src="./assets/fg_imagotipo.svg" alt="">
-              <div class="formulario__description__logo"></div>
-              <div class="formulario__description__titles">
-                <h1>Diplomado Media Tensión</h1>
-                <p>Registrate aun queda <span id="contador"></span> lugares</p>
-              </div>
-              <hr>
-            </div>
-            <div class="formulario__content">
-              <form onsubmit="enviar_ajax(); return false" id="diplomado" class="formulario needs-validation">
-                <div class="row">
-                  <div class="col-6">
-                    <label for="name" class="required">Nombre</label>
-                    <input type="text" placeholder="Ingresa tu nombre" name="name" required>
-                  </div>
-                  <div class="col-6">
-                    <label for="email" class="required">Correo Eléctronico</label>
-                    <input type="email" placeholder="Ingresa tu correo" name="email" required>
-                  </div>
-                  <div class="col-6">
-                    <label for="tel" class="required">Celular</label>
-                    <input type="tel" placeholder="Ingresa tu celular de contacto" name="tel" required>
-                  </div>
-                  <div class="col-6">
-                    <label for="business" class="required">Empresa</label>
-                    <input type="text" placeholder="Nombre de empresa" name="business" required>
-                  </div>
-                  <div class="col-6">
-                    <label for="position" class="required">Puesto</label>
-                    <input type="text" placeholder="Ingresa tu puesto" name="position" required>
-                  </div>
-                  <div class="col-6">
-                    <label for="conocimiento">Nivel de conocimiento</label>
-                    <select name="conocimiento" id="conocimiento">
-                      <option value="" selected hidden>Selecciona una opción</option>
-                      <option value="Bajo">Bajo</option>
-                      <option value="Medio">Medio</option>
-                      <option value="Avanzado">Avanzado</option>
-                      <option value="Experto">Experto</option>
-                    </select>
-                  </div>
-                  <div class="col-12">
-                    <label for="pregunta" class="required">Dejanos una pregunta</label>
-                    <textarea name="pregunta" id="pregunta" cols="30" rows="3"
-                      placeholder="Dejanos cualquier duda o pregunta que quieras se responda durante la sesisón"></textarea>
-                  </div>
-                  <div class="col-12 submit__container">
-                    <button class="btn-submit" type="submit" value="">Registrate Ahora</button>
-                  </div>
-                  <div class="col-12">
-                    <div class="row">
-                      <div class="col-6">
-                        <p class="text-left text-muted">© 2022 Create By team MKT</p>
-                      </div>
-                      <div class="col-6">
-                        <p class="text-muted" style="text-align: right;">Grupo FG</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-
-            </div>
-
-          </div>
+        <div class="modal-body">
+          <iframe src="https://cdn.shopify.com/s/files/1/0257/8494/2641/files/Catalogo_FG_Electrical.pdf?v=1692296421"
+            width="100%" height="100%"></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         </div>
       </div>
     </div>
+  </div>
 
+  <div class="modal fade" id="CatalogoFGM" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Catálogo Valmact</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <iframe src="https://valmact.com/documents/Valmact_Catalogo.pdf" width="100%" height="100%"></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="Concursos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Conoce como participar</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="PropuestaValor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Propuesta de valor</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <main>
+    <div class="container__tablet">
+      <div class="SideBar">
+        <div class="Menu__content">
+          <div class="Menu__header">
+            <a href="#" class="menu__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                <g fill="#031226">
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
+                  <path d="m8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
+                </g>
+              </svg>
+              Menú
+            </a>
+            <span class="menu__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                <path fill="#031226"
+                  d="M9 7a2 2 0 1 1-4 0a2 2 0 0 1 4 0M8 7a1 1 0 1 0-2 0a1 1 0 0 0 2 0M1 4.25C1 3.56 1.56 3 2.25 3h9.5c.69 0 1.25.56 1.25 1.25v5.5c0 .69-.56 1.25-1.25 1.25h-9.5C1.56 11 1 10.44 1 9.75zM2.25 4a.25.25 0 0 0-.25.25V5h.5a.5.5 0 0 0 .5-.5V4zM2 9.75c0 .138.112.25.25.25H3v-.5a.5.5 0 0 0-.5-.5H2zm2-.25v.5h6v-.5A1.5 1.5 0 0 1 11.5 8h.5V6h-.5A1.5 1.5 0 0 1 10 4.5V4H4v.5A1.5 1.5 0 0 1 2.5 6H2v2h.5A1.5 1.5 0 0 1 4 9.5m7 .5h.75a.25.25 0 0 0 .25-.25V9h-.5a.5.5 0 0 0-.5.5zm1-5v-.75a.25.25 0 0 0-.25-.25H11v.5a.5.5 0 0 0 .5.5zm-7.5 8a1.5 1.5 0 0 1-1.427-1.036c.139.024.281.036.427.036h8.25A2.25 2.25 0 0 0 14 9.75V5.085A1.5 1.5 0 0 1 15 6.5v3.25A3.25 3.25 0 0 1 11.75 13z" />
+              </svg>
+              Money
+            </span>
+          </div>
+          <div class="Menu__footer">
+            <a href="#" class="menu__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 15 15">
+                <path fill="#031226" fill-rule="evenodd"
+                  d="M7 1h7v13H7v-1h6V2H7zm.854 3.146l3.34 3.34l-3.327 3.603l-.734-.678L9.358 8H1V7h8.293L7.146 4.854z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+            <span>Login</span>
+          </div>
+        </div>
+      </div>
+      <div class="CapacitacioneSolicitud wow animate__animated animate__bounceIn" data-wow-delay="500ms">
+        <div class="capacitaciones__content">
+          <h2 class="capacitaciones__content__title">Capacitamos a tu equipo</h2>
+          <div class="capacitaciones__content__form">
+            <form action="">
+              <input placeholder="Ingresa tú correo" type="email" name="correo" id="correo">
+              <input type="datetime-local" name="datetime" id="datetime">
+              <input placeholder="No de asistentes" type="number" name="asistentes" id="asistentes">
+              <input placeholder="Dirección" type="text" name="direccion" id="direccion">
+              <input id="submit" type="submit" value="Solicitar Capacitación">
+            </form>
+            <p class="capacitaciones__content__politicies">Solicita una capacitación, la fecha y hora solicitadas serna
+              previamente validadas, recibiras un correo
+              de confirmación una vez asignemos a un capacitador.</p>
+          </div>
+        </div>
+      </div>
+      <div class="CatalogoFG wow animate__animated animate__bounceIn" data-wow-delay="600ms">
+        <div class="catalog__content">
+          <img type="button" data-bs-toggle="modal" data-bs-target="#CatalogoFG" class="catalog__content__image"
+            src="https://cdn.shopify.com/s/files/1/0257/8494/2641/files/Catalogo_FG.jpg?v=1652139027" alt="">
+          <h2 class="catalog__content__title">Catálogo FG Electrical</h2>
+        </div>
+      </div>
+      <div class="CatalogoValmact wow animate__animated animate__bounceIn" data-wow-delay="700ms">
+        <div class="catalog__content">
+          <img type="button" data-bs-toggle="modal" data-bs-target="#CatalogoFGM" class="catalog__content__image"
+            src="https://cdn.shopify.com/s/files/1/0257/8494/2641/files/catalogo_valmact.jpg?v=1692377696" alt="">
+          <h2 class="catalog__content__title">Catálogo Valmact</h2>
+        </div>
+      </div>
+      <div class="Fichas wow animate__animated animate__bounceIn" data-wow-delay="800ms">
+        <div class="catalog__content">
+          <svg class="catalog__content__paper" xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0 32 32">
+            <path fill="currentColor"
+              d="M28.916 8.01L15.953 1.887a.92.92 0 0 0-1.288.638c-.003.01-1.04 4.83-2.58 9.635c-.525 1.647-1.113 3.275-1.727 4.705l1.665.786c2-4.642 3.584-11.05 4.18-13.613L27.47 9.353c-.346 1.513-1.233 5.223-2.42 8.927c-.767 2.4-1.665 4.797-2.585 6.532c-.89 1.79-1.958 2.67-2.197 2.552c-1.42.03-2.418-1.262-3.09-2.918a13.7 13.7 0 0 1-.657-2.246c-.128-.618-.167-1.006-.17-1.006a.906.906 0 0 0-.52-.73l-12.96-6.12a.924.924 0 0 0-.926.08a.92.92 0 0 0-.38.847c.008.046.195 1.85.947 3.737c.522 1.32 1.407 2.818 2.846 3.575l12.956 6.13l.006-.012c.562.295 1.2.487 1.947.496c1.797-.117 2.777-1.668 3.818-3.525c3-5.69 5.32-16.6 5.338-16.64a.91.91 0 0 0-.504-1.02z" />
+          </svg>
+          <h2 class="catalog__content__title">Fichas Técnicas</h2>
+        </div>
+      </div>
+      <div class="BannerArea wow animate__animated animate__bounceInDown">
+        <div id="carouselExampleInterval" class="carousel slide carousel_banner" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+              <div class="banner__containers ">
+                <img src="./assets/banner_tablet_1.png" class="banner__content__background" alt="...">
+                <div class="banner__content">
+                  <span class="banner__content__type">Aviso importante</span>
+                  <p class="banner__content__title">Días de inventario 21 y 22 de febrero <span
+                      class="banner__content__strong">¡Agenda
+                      tus pedidos!</span></p>
+                  <a class="banner__content__button" href="">Capacita a tu equipo <span> <svg
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76" />
+                      </svg></span></a>
+                </div>
+              </div>
+
+            </div>
+            <div class="carousel-item active" data-bs-interval="3000">
+              <div class="banner__containers ">
+                <img src="./assets/banner_tablet_1.png" class="banner__content__background" alt="...">
+                <div class="banner__content">
+                  <span class="banner__content__type">Aviso importante</span>
+                  <p class="banner__content__title">Días de inventario 21 y 22 de febrero <span
+                      class="banner__content__strong">¡Agenda
+                      tus pedidos!</span></p>
+                  <a class="banner__content__button" href="">Capacita a tu equipo <span> <svg
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76" />
+                      </svg></span></a>
+                </div>
+              </div>
+
+            </div>
+            <!-- <div class="carousel-item" data-bs-interval="2000">
+              <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="...">
+            </div> -->
+          </div>
+          <div class="carousel_control_arrow">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+      <div class="TiendasEnLinea wow animate__animated animate__bounceInLeft" data-wow-delay="300ms">
+        <div class="TiendaEnLinea__Content row">
+          <div class="TiendaEnLinea__FG col-6">
+            <h2>Cotiza en linea <span> FG </span></h2>
+            <a href="https://www.fgelectrical.com/" target="_blank">
+              <img src="./assets/TiendaFG.png" alt="Tienda en linea FG Electrical">
+            </a>
+          </div>
+          <div class="TiendaEnLinea__FGM col-6">
+            <h2>Cotiza en linea <span> Valmact </span></h2>
+            <a href="https://valmact.com/" target="_blank">
+              <img src="./assets/TiendaFGM.png" alt="Tienda en linea Valmact">
+            </a>
+          </div>
+          <div class="col-12">
+            <div class="TiendaEnLinea__codigo row">
+              <h3 class="">Descuentos especiales</h3>
+              <p class="col-7">Utiliza esté código de descuento en nuestras tiendas en linea, recibe puntos en tus
+                compras realizadas
+                desde la tienda</p>
+              <p class="TiendaEnLinea__codigo__discount col-2">Codigo: <span> MARFGDEST</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="SobreNosotros wow animate__animated animate__bounceInRight" data-wow-delay="400ms">
+        <div class="SobreNosotros__content">
+          <img class="SobreNosotros__background" src="./assets/Nosotros.png" alt="">
+          <div class="SobreNosotros__propuestaValor">
+            <h2>Conoce el poder de la calidad</h2>
+            <p>¿Ya nos conocías? Sumergete en nuestro video corporativo y descubre todo lo que FG Electrical tiene para
+              ti.</p>
+            <a type="button" data-bs-toggle="modal" data-bs-target="#PropuestaValor"
+              href="https://cdn.shopify.com/s/files/1/0257/8494/2641/files/CV_FGE_2023.pdf?v=1690929896"
+              target="_blank">Nuestras propuesta de valor</a>
+          </div>
+          <div class="SobreNosotros__play" type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+              <path fill="currentColor"
+                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M1.5 8a6.5 6.5 0 1 0 13 0a6.5 6.5 0 0 0-13 0m4.879-2.773l4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="Merch wow animate__animated animate__animated animate__bounceInRight" data-wow-delay="500ms">
+        <div class="Merch__content">
+          <div class="Merch__propuestaValor">
+            <h2>Solicita tu Merchandising</h2>
+            <p>¿Nos invitas a formar parte de tus tiendas? Conoce nuestros terminos y condiciones. Disfruta de estos y
+              muchos otros beneficios para ti.</p>
+            <a href="" target="_blank">Da vida a tu sucursal</a>
+          </div>
+          <div class="Merch__play ">
+            <img src="./assets/Merch.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="ContainerCapacitaciones">
+        <div class="event__container row">
+          <div class="event__title col-12">
+            <h2>Próximamente</h2>
+            <div class="event__content row">
+              <div class="col-6">
+                <img src="https://valmact.com/assets/img/valmact.svg" alt="">
+              </div>
+              <div class="col-6">
+                dd/mm/yyyy
+              </div>
+              <div class="col-12">
+                <i>Ubicación: Atizapán de zaragoza</i>
+                <p>12 pm - 13 pm</p>
+              </div>
+              <div class="col-12">
+                <a href="">¡Aparta tu lugar!</a>
+              </div>
+            </div>
+            <div class="event__content row">
+              <div class="col-6">
+                <img src="https://valmact.com/assets/img/valmact.svg" alt="">
+              </div>
+              <div class="col-6">
+                dd/mm/yyyy
+              </div>
+              <div class="col-12">
+                <i>Ubicación: Atizapán de zaragoza</i>
+                <p>12 pm - 13 pm</p>
+              </div>
+              <div class="col-12">
+                <a href="">¡Aparta tu lugar!</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <img class="wow animate__animated animate__animated animate__pulse data-wow-duration=" 2s"
+              data-wow-delay="5s"" data-wow-duration=" 4s" data-wow-delay="200ms" src="./assets/Corona.png"
+              alt="corona__concursos">
+            <div class="ranking__sales">
+              <h2>Ranking de concurso</h2>
+              <ul>
+                <li>Alcanza la cima ¡Participa!</li>
+                <li>Alcanza la cima ¡Participa!</li>
+                <li>Alcanza la cima ¡Participa!</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 container__boton">
+            <a type="button" data-bs-toggle="modal" data-bs-target="#Concursos" href="" target="_blank">Ver como
+              participar</a>
+          </div>
+          <div class="col-12">
+            <div class="social__media row">
+              <div class="col-3">
+                <a href="https://www.facebook.com/FGElectrical/" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <g fill="none">
+                      <path
+                        d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                      <path fill="#031226"
+                        d="M13.5 21.888C18.311 21.164 22 17.013 22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.013 3.689 9.165 8.5 9.888V15H9a1.5 1.5 0 0 1 0-3h1.5v-2A3.5 3.5 0 0 1 14 6.5h.5a1.5 1.5 0 0 1 0 3H14a.5.5 0 0 0-.5.5v2H15a1.5 1.5 0 0 1 0 3h-1.5z" />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+              <div class="col-3">
+                <a href="https://www.instagram.com/fgelectrical_oficial/" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="#031226"
+                      d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                  </svg>
+                </a>
+              </div>
+              <div class="col-3">
+                <a href="https://twitter.com/fg_electrical" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                    <path fill="#031226"
+                      d="M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.642-5.436L10.751 15h4.05zM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843z" />
+                  </svg>
+                </a>
+              </div>
+              <div class="col-3">
+                <a href="https://www.linkedin.com/in/valmact-manufacturing-b9a2602b8/" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="#031226"
+                      d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </main>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://wowjs.uk/dist/wow.min.js"> </script>
-
-
-  <script type="text/javascript">
-    //===
-    // VARIABLES
-    //===
-    const DATE_TARGET = new Date('01/13/2023 07:00 AM');
-    // DOM for render
-    const SPAN_DAYS = document.querySelector('span#days');
-    const SPAN_HOURS = document.querySelector('span#hours');
-    const SPAN_MINUTES = document.querySelector('span#minutes');
-    const SPAN_SECONDS = document.querySelector('span#seconds');
-    // Milliseconds for the calculations
-    const MILLISECONDS_OF_A_SECOND = 1000;
-    const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
-    const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
-    const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24
-
-    //===
-    // FUNCTIONS
-    //===
-
-    /**
-     * Method that updates the countdown and the sample
-     */
-    function updateCountdown() {
-      // Calcs
-      const NOW = new Date()
-      const DURATION = DATE_TARGET - NOW;
-      const REMAINING_DAYS = Math.floor(DURATION / MILLISECONDS_OF_A_DAY);
-      const REMAINING_HOURS = Math.floor((DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR);
-      const REMAINING_MINUTES = Math.floor((DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE);
-      const REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);
-      // Thanks Pablo Monteserín (https://pablomonteserin.com/cuenta-regresiva/)
-
-      // Render
-      SPAN_DAYS.textContent = REMAINING_DAYS;
-      SPAN_HOURS.textContent = REMAINING_HOURS;
-      SPAN_MINUTES.textContent = REMAINING_MINUTES;
-      SPAN_SECONDS.textContent = REMAINING_SECONDS;
-    }
-
-    //===
-    // INIT
-    //===
-    updateCountdown();
-    // Refresh every second
-    setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
-
-
-  </script>
   <script>
     new WOW().init();
-    function radio() {
-      $(".audio")[0].play();
-    }
-    $(document).ready(function () {
-      $('#mytoast').toast("show");
-
-    });
-
-  </script>
-  <script type="text/javascript">
-    function acceso() {
-      let access = document.getElementById('covid');
-      let submit = document.getElementById('submit')
-      if (access.value == "No") {
-        $('#noCartaCovid').modal('show');
-        submit.classList.add("sin-accesso");
-      }
-      else if (access.value == "Si") {
-        $('#cartaCovid').modal('show');
-        submit.classList.remove("sin-accesso");
-      }
-    }
-
-  </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="./js/main.js"></script>
-
-
-  <script type="text/javascript">
-
-
-    function tieneLicencia() {
-      let licen = document.getElementById('licencia');
-      let numLicencia = document.getElementById('numero-licencia');
-      let estadoLicencia = document.getElementById('estado-licencia');
-      let vigLicencia = document.getElementById('vigencia-licencia');
-
-      if (licen.value == "No") {
-        numLicencia.setAttribute("disabled", "");
-        estadoLicencia.setAttribute("disabled", "");
-        vigLicencia.setAttribute("disabled", "");
-
-        numLicencia.value = "No aplica";
-        estadoLicencia.value = "No aplica";
-
-        console.log("Sin licencia");
-
-      }
-      else if (licen.value == "Si") {
-        numLicencia.removeAttribute("disabled", "");
-        estadoLicencia.removeAttribute("disabled", "");
-        vigLicencia.removeAttribute("disabled", "");
-
-        numLicencia.value = "";
-        estadoLicencia.value = "";
-        console.log("Con licencia");
-      }
-    }
   </script>
 </body>
 
