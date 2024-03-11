@@ -631,6 +631,10 @@ main .Fichas {
   background-color: var(--grey);
   border-radius: 15px;
 }
+.SideBar .Menu__content a {
+  text-decoration: none;
+  color: var(--blue-button);
+}
 .SideBar .Menu__content .Menu__header,
 .SideBar .Menu__content .Menu__footer {
   display: flex;
